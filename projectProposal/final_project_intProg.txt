@@ -1,0 +1,25 @@
+Description:
+
+nowastesite.com
+
+a website that connects food providers with the people in need of food in Montreal, achieving 
+the goal of reducing food waste.
+
+the project will register the food providers and display them with the items 
+they will be donating. with a mini map location it will be easier to enter their location
+
+on the user end (as a person who searches for support) they will be able to search
+for specific food types and/or the name of the food provider.
+
+after choosing deciding, they can choose the food and save it in their "cart".
+when "checking out" they will be filling out a form, entering their infomration
+and a notification email will be sent to the food provider as well as a request.
+if the user decides to leave the website for an unnamed reason, the cart will be
+able to save their choices as well as their information, simplifing and reducing 
+the check out time.
+
+if the food provider accepts the user's request, a comfirmation email will be sent
+back to the user accepting the order.
+
+after the accepting the food provider should contact a delivery service provider
+OR deliver the food themselves using the information provided to them by email.

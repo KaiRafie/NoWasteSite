@@ -5,57 +5,153 @@
 	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
 	<title>No Waste Site</title>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<link rel='stylesheet' type='text/css' media='screen' href='index.css'>
-	<script src='main.js'></script>
+	<link rel='stylesheet' type='text/css' media='screen' href='./styles/index.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href="./styles/footer.css">
+    <link rel='stylesheet' type='text/css' media='screen' href="./styles/navbar.css">
+	<script src='./script/main.js'></script>
 </head>
 <body>
 	<header>
 		<!-- logo -->
+		<button><img src="" alt=""></button>
 		<nav>
-			<!-- search -->
-			<!-- buttons -->
+			<!-- navbar -->
+			<div class="nav-right">
+				<!-- search bar -->
+				<div class="search-bar">
+					<input type="text" name="search" id="search-bar" placeholder="Search">
+					<button><img src="..." alt="search"></button>
+				</div>
+				<!-- pages -->
+				<a href="#Home">Home</a>
+				<a href="about.html">About</a>
+				<a href="settings.html">Account Settings</a>
+				<a href="#footer">Contact</a>
+			</div>
 		</nav>
 	</header>
 	<aside>
 
-		<!-- account -->
+		<!-- account information -->
 		<div>
-			<!-- picture -->
-			<!-- email name -->
-			<!-- options that takes you on another page -->
+			<!-- picture of the first letter of the name entered-->
+			<div class="first-letter"></div>
+			<!-- username -->
+			<div class="user-name"></div>
+			<!-- options (gear icon) that takes you to the settings page -->
+			<a target="_blank" href="#settings"></a>
 		</div>
 
 		
 		<!-- have the side bar closable and if necessary scrollable -->
 		<!-- diet options -->
-		<div>
-			
+		<div class="sidebar">
+			<div class="filter-section">
+				<h3>Diet Options</h3>
+				<div class="filter-checkboxes">
+					<input type="checkbox" name="vegan" id="vegan" value="vegan">
+					<label for="vegan">Vegan</label>
+				</div>
+				<div class="filter-checkboxes">
+					<input type="checkbox" name="vegetarian" id="vegetarian" value="vegetarian">
+					<label for="vegetarian">Vegetarian</label>
+				</div>
+				<div class="filter-checkboxes">
+					<input type="checkbox" name="gluten-free" id="gluten-free" value="gluten-free">
+					<label for="gluten-free">Gluten-free</label>
+				</div>
+				<div class="filter-checkboxes">
+					<input type="checkbox" name="halal" id="halal" value="halal">
+					<label for="halal">Halal</label>
+				</div>
+			</div>
 		</div>
-		<!-- alergies -->
-		<div>
-
+		<!-- allergies -->
+		<div class="filter-section">
+			<h3>Allergies</h3>
+			<div class="filter-checkboxes">
+				<input type="checkbox" name="nuts" id="nuts" value="nuts">
+				<label for="nuts">nuts</label>
+			</div>
+			<div class="filter-checkboxes">
+				<input type="checkbox" name="dairy" id="dairy" value="dairy">
+				<label for="dairy">Dairy</label>
+			</div>
+			<div class="filter-checkboxes">
+				<input type="checkbox" name="fish" id="fish" value="fish">
+				<label for="fish">Fish</label>
+			</div>
+			<div class="filter-checkboxes">
+				<input type="checkbox" name="soy" id="soy" value="soy">
+				<label for="soy">Soy</label>
+			</div>
 		</div>
 		<!-- items -->
-		<div>
-
+		<div class="filter-section">
+			<h3>Items</h3>
+			<div class="filter-checkboxes">
+				<input type="checkbox" name="drink" id="drink" value="drink">
+				<label for="drink">Drink</label>
+			</div>
+			<div class="filter-checkboxes">
+				<input type="checkbox" name="main-dish" id="main-dish" value="main-dish">
+				<label for="main-dish">Main dish</label>
+			</div>
+			<div class="filter-checkboxes">
+				<input type="checkbox" name="side-dish" id="side-dish" value="side-dish">
+				<label for="side-dish">Side dish</label>
+			</div>
+			<div class="filter-checkboxes">
+				<input type="checkbox" name="dessert" id="dessert" value="dessert">
+				<label for="dessert">Dessert</label>
+			</div>
 		</div>
-		<!-- popular food providers -->
-		 <div>
-
-		 </div>
 	</aside>
 
 	<main>
-		<h1></h1>
-		<h2></h2>
-		<!-- separation line -->
-		<!-- options -->
+		<h1>From Generosity to Necessity: Sharing Meals, Changing Lives</h1>
+		<h2>Together, we ensure surplus food reaches those who need it most.</h2>
+		<hr>
+		<template class="item-template">
+			<article class="food-item">
+				<div class="food-title"></div>
+				<img src="" alt="Plate-Image" class="food-image">
+				<p class="food-description"></p>
+				<p class="food-location"></p>
+				<p class="provider-name"></p>
+			</article>
+
+		</template>
 		
 	</main>
-	
 
 	<footer>
-		<p></p>
+		<div class="footer" id="footer">
+			<div class="footer-section">
+				<h4>About Us</h4>
+				<p>We are committed to connecting food providers with those in need, ensuring no food goes to waste. Together, we can make a difference.</p>
+			</div>
+			<div class="footer-section">
+				<h4>Quick Links</h4>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">FAQ</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h4>Follow Us</h4>
+				<ul>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Instagram</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2024 NoWasteSite. All Rights Reserved.</p>
+		</div>
 	</footer>
 </body>
 </html>

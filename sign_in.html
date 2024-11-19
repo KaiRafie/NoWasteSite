@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>No Waste Site</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/sign_in.css'>
+    <script src='script/sign_in.js'></script>
+</head>
+<body>
+    <div class="signin-container">
+        <form action="/data/authenticate.json" method="post">
+            <div class="form-info">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" placeholder="Enter your username" required>
+            </div>
+            <div class="form-info">
+                <label for="password">Password:</label>
+                <input type="text" name="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-info">
+                <button type="submit" class="signin-btn">Sign In</button>
+            </div>
+            <div class="form-info">
+                <p>Don't have an account? <a href="signup.html">Sign Up Here</a>!</p>
+                <p>Or continue as a <a href="index.html">guest</a>.</p>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

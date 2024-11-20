@@ -9,25 +9,32 @@
     <script src='script/sign_in.js'></script>
 </head>
 <body>
-    <div class="signin-container">
-        <form action="/data/authenticate.json" method="post">
-            <div class="form-info">
-                <label for="email">Email:</label>
-                <input type="text" name="email" id="email" placeholder="Enter your username" required>
-            </div>
-            <div class="form-info">
-                <label for="password">Password:</label>
-                <input type="text" name="password" id="password" placeholder="Enter your password" required>
-            </div>
-            <div class="form-info">
-                <button type="submit" class="signin-btn">Sign In</button>
-            </div>
-            <div class="form-info">
-                <p>Don't have an account? <a href="signup.html">Sign Up Here</a>!</p>
-                <p>Or continue as a <a href="index.html">guest</a>.</p>
-            </div>
-        </form>
-    </div>
-    
+    <header>
+
+    </header>
+    <main>
+        <div class="signin-container">
+            <form action="/data/authenticate.json" method="post">
+                <div class="form-info">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" placeholder="Enter your username" required>
+                </div>
+                <div class="form-info">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-info">
+                    <button type="submit" class="signin-btn">Sign In</button>
+                </div>
+                <div class="form-info">
+                    <p>Don't have an account? <a href="signup.html">Sign Up</a>Here !</p>
+                    <p>Or continue as a <a href="index.html">guest</a>.</p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
 </body>
 </html>

@@ -62,6 +62,17 @@ aside {
     z-index: 0.5; /* Ensures sidebar stays on top */
 }
 
+.sign-inbtn {
+    position: absolute;
+    bottom: 65px;
+    color: #000000;
+    transition: color 0.15s ease-in;
+}
+
+.sign-inbtn:hover {
+    color: #3ddab0;
+}
+
 .account {
     display: inline-flex;
     align-items: center;

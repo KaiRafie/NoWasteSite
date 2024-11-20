@@ -13,7 +13,10 @@
 }
 
 /* Body Styling */
-body {
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
     color: #333333;
     background-color: #f4f4f4;
@@ -23,12 +26,14 @@ h1 {
     font-size: 36px;
     color: #3ddab0;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 h2 {
     font-size: 24px;
     color: #555555;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 hr {
@@ -36,13 +41,20 @@ hr {
     margin-bottom: 30px;
 }
 
+.center {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    gap: 20px;
+}
 /* Sidebar Styling */
 aside {
+    flex: 0 0 250px;
     display: inline-block;
     background-color: #ffffff;
-    width: 250px;
+    max-width: 250px;
     padding: 20px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 15px 3px rgb(0, 0, 0);
     position: fixed;
     left: 0;
     height: 100%;
@@ -77,7 +89,7 @@ aside {
 }
 
 .sidebar {
-    margin-top: 30px; /* Ensures content below account info */
+    margin-top: 30px;
 }
 
 .filter-section {
@@ -105,7 +117,8 @@ input[type="checkbox"] {
 
 /* Main Content Styling */
 main {
-    margin-left: 270px; /* Offset to prevent overlap with sidebar */
+    flex: 1;
+    margin-left: 187px;
     padding: 20px;
 }
 

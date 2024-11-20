@@ -15,12 +15,12 @@
 	<script src='./script/main.js'></script>
 </head>
 <body>
-	<header id="Home">
+	<header id="home">
 		<nav>
 			<!-- logo -->
-			<button class="logo">
-				<img src="..." alt="logo">
-			</button>
+			<a href="#Home" class="logo">
+				<img src="assets/logo/logo_completed.png" alt="logo">
+			</a>
 			<!-- navbar -->
 			<div class="nav-right">
 				<!-- search bar -->
@@ -38,125 +38,139 @@
 			</div>
 		</nav>
 	</header>
-	<aside>
-		<!-- account information -->
-		<div class="account">
-			<!-- picture of the first letter of the name entered-->
-			<div class="first-letter">K</div>
-			<!-- username -->
-			<div class="user-name">Kai Raf</div>
-			<!-- options (gear icon) that takes you to the settings page -->
-			<a target="_blank" href="account_info.html">
-				<i class="fa fa-gear"></i> 
-			</a>
-		</div>
-
-		<!-- have the side bar closable and if necessary scrollable -->
-		<!-- diet options -->
-		<div class="sidebar">
-			<div class="filter-section">
-				<h3>Diet Options</h3>
-				<div class="filter-checkboxes">
-					<input type="checkbox" name="vegan" id="vegan" value="vegan">
-					<label for="vegan">Vegan</label>
+	<div class="center">
+		<aside>
+			<!-- account information -->
+			<div class="account">
+				<!-- picture of the first letter of the name entered-->
+				<div class="first-letter">K</div>
+				<!-- username -->
+				<div class="user-name">Kai Raf</div>
+				<!-- options (gear icon) that takes you to the settings page -->
+				<a target="_blank" href="account_info.html">
+					<i class="fa fa-gear"></i> 
+				</a>
+			</div>
+	
+			<!-- have the side bar closable and if necessary scrollable -->
+			<!-- diet options -->
+			<div class="sidebar">
+				<div class="filter-section">
+					<h3>Diet Options</h3>
+					<div class="filter-checkboxes">
+						<input type="checkbox" name="vegan" id="vegan" value="vegan">
+						<label for="vegan">Vegan</label>
+					</div>
+					<div class="filter-checkboxes">
+						<input type="checkbox" name="vegetarian" id="vegetarian" value="vegetarian">
+						<label for="vegetarian">Vegetarian</label>
+					</div>
+					<div class="filter-checkboxes">
+						<input type="checkbox" name="gluten-free" id="gluten-free" value="gluten-free">
+						<label for="gluten-free">Gluten-free</label>
+					</div>
+					<div class="filter-checkboxes">
+						<input type="checkbox" name="halal" id="halal" value="halal">
+						<label for="halal">Halal</label>
+					</div>
 				</div>
-				<div class="filter-checkboxes">
-					<input type="checkbox" name="vegetarian" id="vegetarian" value="vegetarian">
-					<label for="vegetarian">Vegetarian</label>
+			
+				<!-- allergies -->
+				<div class="filter-section">
+					<h3>Allergies</h3>
+					<div class="filter-checkboxes">
+						<input type="checkbox" name="nuts" id="nuts" value="nuts">
+						<label for="nuts">nuts</label>
+					</div>
+					<div class="filter-checkboxes">
+						<input type="checkbox" name="dairy" id="dairy" value="dairy">
+						<label for="dairy">Dairy</label>
+					</div>
+					<div class="filter-checkboxes">
+						<input type="checkbox" name="fish" id="fish" value="fish">
+						<label for="fish">Fish</label>
+					</div>
+					<div class="filter-checkboxes">
+						<input type="checkbox" name="soy" id="soy" value="soy">
+						<label for="soy">Soy</label>
+					</div>
 				</div>
-				<div class="filter-checkboxes">
-					<input type="checkbox" name="gluten-free" id="gluten-free" value="gluten-free">
-					<label for="gluten-free">Gluten-free</label>
-				</div>
-				<div class="filter-checkboxes">
-					<input type="checkbox" name="halal" id="halal" value="halal">
-					<label for="halal">Halal</label>
+				<!-- items -->
+				<div class="filter-section">
+					<h3>Items</h3>
+					<div class="filter-checkboxes">
+						<input type="checkbox" name="drink" id="drink" value="drink">
+						<label for="drink">Drink</label>
+					</div>
+					<div class="filter-checkboxes">
+						<input type="checkbox" name="main-dish" id="main-dish" value="main-dish">
+						<label for="main-dish">Main dish</label>
+					</div>
+					<div class="filter-checkboxes">
+						<input type="checkbox" name="side-dish" id="side-dish" value="side-dish">
+						<label for="side-dish">Side dish</label>
+					</div>
+					<div class="filter-checkboxes">
+						<input type="checkbox" name="dessert" id="dessert" value="dessert">
+						<label for="dessert">Dessert</label>
+					</div>
 				</div>
 			</div>
-		
-			<!-- allergies -->
-			<div class="filter-section">
-				<h3>Allergies</h3>
-				<div class="filter-checkboxes">
-					<input type="checkbox" name="nuts" id="nuts" value="nuts">
-					<label for="nuts">nuts</label>
-				</div>
-				<div class="filter-checkboxes">
-					<input type="checkbox" name="dairy" id="dairy" value="dairy">
-					<label for="dairy">Dairy</label>
-				</div>
-				<div class="filter-checkboxes">
-					<input type="checkbox" name="fish" id="fish" value="fish">
-					<label for="fish">Fish</label>
-				</div>
-				<div class="filter-checkboxes">
-					<input type="checkbox" name="soy" id="soy" value="soy">
-					<label for="soy">Soy</label>
-				</div>
-			</div>
-			<!-- items -->
-			<div class="filter-section">
-				<h3>Items</h3>
-				<div class="filter-checkboxes">
-					<input type="checkbox" name="drink" id="drink" value="drink">
-					<label for="drink">Drink</label>
-				</div>
-				<div class="filter-checkboxes">
-					<input type="checkbox" name="main-dish" id="main-dish" value="main-dish">
-					<label for="main-dish">Main dish</label>
-				</div>
-				<div class="filter-checkboxes">
-					<input type="checkbox" name="side-dish" id="side-dish" value="side-dish">
-					<label for="side-dish">Side dish</label>
-				</div>
-				<div class="filter-checkboxes">
-					<input type="checkbox" name="dessert" id="dessert" value="dessert">
-					<label for="dessert">Dessert</label>
-				</div>
-			</div>
-		</div>
-	</aside>
-
-	<main>
-		<h1>From Generosity to Necessity: Sharing Meals, Changing Lives</h1>
-		<h2>Together, we ensure surplus food reaches those who need it most.</h2>
-		<hr>
-		<template class="item-template">
-			<article class="food-item">
-				<div class="food-title">Sample</div>
-				<img src="..." alt="Plate-Image" class="food-image">
-				<p class="food-description">Sample</p>
-				<p class="food-location">Sample</p>
-				<p class="provider-name">Sample</p>
-			</article>
-
-		</template>
-		
-	</main>
+		</aside>
+	
+		<main>
+			<h1>From Generosity to Necessity: Sharing Meals, Changing Lives</h1>
+			<h2>Together, we ensure surplus food reaches those who need it most.</h2>
+			<hr>
+			<template class="item-template">
+				<article class="food-item">
+					<div class="food-title">Sample</div>
+					<img src="..." alt="Plate-Image" class="food-image">
+					<p class="food-description">Sample</p>
+					<p class="food-location">Sample</p>
+					<p class="provider-name">Sample</p>
+				</article>
+	
+			</template>
+			
+		</main>
+	</div>
 
 	<footer>
-		<div class="footer" id="footer">
-			<div class="footer-section">
+		<div class="footer-section" id="footer">
+			<div class="footer-subsection top-subsection">
 				<h4>About Us</h4>
 				<p>We are committed to connecting food providers with those in need, ensuring no food goes to waste. Together, we can make a difference.</p>
 			</div>
-			<div class="footer-section">
-				<h4>Quick Links</h4>
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">FAQ</a></li>
-				</ul>
+			
+			<div class="buttom-subsection">
+				<div class="footer-subsection">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="#Home">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact@nws.qc.ca">Contact</a></li>
+					</ul>
+				</div>
+				<div class="footer-subsection">
+					<h4>Follow Us</h4>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Instagram</a></li>
+					</ul>
+				</div>
+				<div class="footer-subsection">
+					<h4>Contact</h4>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Instagram</a></li>
+						<li><a href="contact@nws.qc.ca">Email</a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="footer-section">
-				<h4>Follow Us</h4>
-				<ul>
-					<li><a href="#">Facebook</a></li>
-					<li><a href="#">Twitter</a></li>
-					<li><a href="#">Instagram</a></li>
-				</ul>
-			</div>
+			
 		</div>
 		<div class="footer-bottom">
 			<p>&copy; 2024 NoWasteSite. All Rights Reserved.</p>

@@ -1,5 +1,147 @@
-.class
-{
-	display: block;
-	color: #00ff00;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.fa-gear {
+    font-size: 15px;
+    color: #3d4545;
+    margin-top: 3px;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    font-size: 36px;
+    color: #3ddab0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+/* Sidebar Styling */
+aside {
+    display: inline-block;
+    background-color: #ffffff;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 0.5; /* Ensures sidebar stays on top */
+}
+
+.account {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.first-letter {
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #3ddab0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.user-name {
+    font-size: 20px;
+    color: #333333;
+    right: 10px;
+}
+
+.sidebar {
+    margin-top: 30px; /* Ensures content below account info */
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h3 {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.filter-checkboxes {
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 14px;
+    color: #555555;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Main Content Styling */
+main {
+    margin-left: 270px; /* Offset to prevent overlap with sidebar */
+    padding: 20px;
+}
+
+.item-template {
+    display: none;
+}
+
+.food-item {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.food-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.food-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.food-description, .food-location, .provider-name {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+/* Scrollable Sidebar */
+.sidebar {
+    overflow-y: auto;
+    max-height: 100%;
 }

@@ -4,6 +4,10 @@
 	<meta charset='utf-8'>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
 	<title>No Waste Site</title>
+
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<link rel='stylesheet' type='text/css' media='screen' href='./styles/index.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href="./styles/footer.css">
@@ -11,16 +15,20 @@
 	<script src='./script/main.js'></script>
 </head>
 <body>
-	<header>
-		<!-- logo -->
-		<button><img src="" alt=""></button>
+	<header id="Home">
 		<nav>
+			<!-- logo -->
+			<button class="logo">
+				<img src="..." alt="logo">
+			</button>
 			<!-- navbar -->
 			<div class="nav-right">
 				<!-- search bar -->
 				<div class="search-bar">
 					<input type="text" name="search" id="search-bar" placeholder="Search">
-					<button><img src="..." alt="search"></button>
+					<button>
+						<i class="fa fa-search"></i>
+					</button>
 				</div>
 				<!-- pages -->
 				<a href="#Home">Home</a>
@@ -31,18 +39,18 @@
 		</nav>
 	</header>
 	<aside>
-
 		<!-- account information -->
-		<div>
+		<div class="account">
 			<!-- picture of the first letter of the name entered-->
-			<div class="first-letter"></div>
+			<div class="first-letter">K</div>
 			<!-- username -->
-			<div class="user-name"></div>
+			<div class="user-name">Kai Raf</div>
 			<!-- options (gear icon) that takes you to the settings page -->
-			<a target="_blank" href="#settings"></a>
+			<a target="_blank" href="account_info.html">
+				<i class="fa fa-gear"></i> 
+			</a>
 		</div>
 
-		
 		<!-- have the side bar closable and if necessary scrollable -->
 		<!-- diet options -->
 		<div class="sidebar">
@@ -65,45 +73,46 @@
 					<label for="halal">Halal</label>
 				</div>
 			</div>
-		</div>
-		<!-- allergies -->
-		<div class="filter-section">
-			<h3>Allergies</h3>
-			<div class="filter-checkboxes">
-				<input type="checkbox" name="nuts" id="nuts" value="nuts">
-				<label for="nuts">nuts</label>
+		
+			<!-- allergies -->
+			<div class="filter-section">
+				<h3>Allergies</h3>
+				<div class="filter-checkboxes">
+					<input type="checkbox" name="nuts" id="nuts" value="nuts">
+					<label for="nuts">nuts</label>
+				</div>
+				<div class="filter-checkboxes">
+					<input type="checkbox" name="dairy" id="dairy" value="dairy">
+					<label for="dairy">Dairy</label>
+				</div>
+				<div class="filter-checkboxes">
+					<input type="checkbox" name="fish" id="fish" value="fish">
+					<label for="fish">Fish</label>
+				</div>
+				<div class="filter-checkboxes">
+					<input type="checkbox" name="soy" id="soy" value="soy">
+					<label for="soy">Soy</label>
+				</div>
 			</div>
-			<div class="filter-checkboxes">
-				<input type="checkbox" name="dairy" id="dairy" value="dairy">
-				<label for="dairy">Dairy</label>
-			</div>
-			<div class="filter-checkboxes">
-				<input type="checkbox" name="fish" id="fish" value="fish">
-				<label for="fish">Fish</label>
-			</div>
-			<div class="filter-checkboxes">
-				<input type="checkbox" name="soy" id="soy" value="soy">
-				<label for="soy">Soy</label>
-			</div>
-		</div>
-		<!-- items -->
-		<div class="filter-section">
-			<h3>Items</h3>
-			<div class="filter-checkboxes">
-				<input type="checkbox" name="drink" id="drink" value="drink">
-				<label for="drink">Drink</label>
-			</div>
-			<div class="filter-checkboxes">
-				<input type="checkbox" name="main-dish" id="main-dish" value="main-dish">
-				<label for="main-dish">Main dish</label>
-			</div>
-			<div class="filter-checkboxes">
-				<input type="checkbox" name="side-dish" id="side-dish" value="side-dish">
-				<label for="side-dish">Side dish</label>
-			</div>
-			<div class="filter-checkboxes">
-				<input type="checkbox" name="dessert" id="dessert" value="dessert">
-				<label for="dessert">Dessert</label>
+			<!-- items -->
+			<div class="filter-section">
+				<h3>Items</h3>
+				<div class="filter-checkboxes">
+					<input type="checkbox" name="drink" id="drink" value="drink">
+					<label for="drink">Drink</label>
+				</div>
+				<div class="filter-checkboxes">
+					<input type="checkbox" name="main-dish" id="main-dish" value="main-dish">
+					<label for="main-dish">Main dish</label>
+				</div>
+				<div class="filter-checkboxes">
+					<input type="checkbox" name="side-dish" id="side-dish" value="side-dish">
+					<label for="side-dish">Side dish</label>
+				</div>
+				<div class="filter-checkboxes">
+					<input type="checkbox" name="dessert" id="dessert" value="dessert">
+					<label for="dessert">Dessert</label>
+				</div>
 			</div>
 		</div>
 	</aside>
@@ -114,11 +123,11 @@
 		<hr>
 		<template class="item-template">
 			<article class="food-item">
-				<div class="food-title"></div>
-				<img src="" alt="Plate-Image" class="food-image">
-				<p class="food-description"></p>
-				<p class="food-location"></p>
-				<p class="provider-name"></p>
+				<div class="food-title">Sample</div>
+				<img src="..." alt="Plate-Image" class="food-image">
+				<p class="food-description">Sample</p>
+				<p class="food-location">Sample</p>
+				<p class="provider-name">Sample</p>
 			</article>
 
 		</template>

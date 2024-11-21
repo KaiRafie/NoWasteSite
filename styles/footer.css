@@ -3,7 +3,7 @@ footer {
     position: relative;
     padding: 20px 0;
     text-align: center;
-    margin-left: 187px;
+    /* margin-left: 187px;  I will be using this one for the index but I dont want to show it for the about page*/
 }
 
 .footer-section {

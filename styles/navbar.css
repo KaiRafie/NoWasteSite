@@ -86,4 +86,5 @@ nav {
     height: 30px;
     width: 120px;
     cursor: pointer;
+    margin-left: -10px;
 }

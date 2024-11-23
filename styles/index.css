@@ -37,7 +37,7 @@ h2 {
 }
 
 hr {
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     margin-bottom: 30px;
 }
 
@@ -47,89 +47,11 @@ hr {
     flex: 1;
     gap: 20px;
 }
-/* Sidebar Styling */
-aside {
-    flex: 0 0 250px;
-    display: inline-block;
-    background-color: #ffffff;
-    max-width: 250px;
-    padding: 20px;
-    box-shadow: 0px 5px 15px 3px rgb(0, 0, 0);
-    position: fixed;
-    left: 0;
-    height: 100%;
-    overflow-y: auto;
-    z-index: 0.5; /* Ensures sidebar stays on top */
-}
-
-.sign-inbtn {
-    position: absolute;
-    bottom: 65px;
-    color: #000000;
-    transition: color 0.15s ease-in;
-}
-
-.sign-inbtn:hover {
-    color: #3ddab0;
-}
-
-.account {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.first-letter {
-    font-size: 25px;
-    color: #ffffff;
-    background-color: #3ddab0;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.user-name {
-    font-size: 20px;
-    color: #333333;
-    right: 10px;
-}
-
-.sidebar {
-    margin-top: 30px;
-}
-
-.filter-section {
-    margin-bottom: 20px;
-}
-
-.filter-section h3 {
-    font-size: 18px;
-    color: #333333;
-    margin-bottom: 10px;
-}
-
-.filter-checkboxes {
-    margin-bottom: 10px;
-}
-
-label {
-    font-size: 14px;
-    color: #555555;
-}
-
-input[type="checkbox"] {
-    margin-right: 10px;
-}
 
 /* Main Content Styling */
 main {
     flex: 1;
-    margin-left: 175px;
+    margin-left: 150px;
     padding: 20px;
 }
 
@@ -164,8 +86,3 @@ main {
     margin-bottom: 5px;
 }
 
-/* Scrollable Sidebar */
-.sidebar {
-    overflow-y: auto;
-    max-height: 100%;
-}

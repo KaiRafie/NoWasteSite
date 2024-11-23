@@ -1,0 +1,159 @@
+/* Sidebar Styling */
+aside {
+    position: fixed;
+    left: 0;
+    width: 163.36px;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0px 5px 15px 3px rgb(0, 0, 0);
+    transition: all 0.3s ease, padding 0.3s ease-in-out;
+    z-index: 0.5;
+}
+
+aside.collapsed {
+    width: 0px;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    /* overflow: visible; */
+}
+
+.sign-inbtn {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 65px;
+    color: #000000;
+    transition: color 0.15s ease-in;
+}
+
+.sign-inbtn:hover {
+    color: #3ddab0;
+}
+
+.account {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.first-letter {
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #3ddab0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.user-name {
+    font-size: 20px;
+    color: #333333;
+    right: 10px;
+}
+
+.sidebar {
+    margin-top: 30px;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.filter-checkboxes {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+label {
+    flex: 1;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    overflow: hidden; 
+    color: #555555;
+}
+
+input[type="checkbox"] {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+/* Scrollable Sidebar */
+.sidebar {
+    overflow-y: auto;
+    max-height: 100%;
+    
+}
+
+.filters {
+    display: none;
+    padding-left: 10px;
+    
+}
+
+/* the options side arrows */
+.collapse-btn::after {
+    display: inline-block;
+    content: '>';
+    margin:0px 3px;
+    transform: rotate(0deg);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.collapse-btn.active::after {
+    content: '>';
+    margin-left: 3px;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+/* the sidebar arrow */
+
+.sidebar-btn {
+    position: fixed;
+    top: 50%;
+    left: 157px;
+    width: 15px;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    background-color: #d6d6d6;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.sidebar-btn::after {
+    content: '<';
+    display: block;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in;
+}
+
+.sidebar-btn.active::after {
+    content: '>';
+    display: block;
+}

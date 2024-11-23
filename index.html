@@ -12,6 +12,7 @@
 	<link rel='stylesheet' type='text/css' media='screen' href='./styles/index.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href="./styles/footer.css">
     <link rel='stylesheet' type='text/css' media='screen' href="./styles/navbar.css">
+    <link rel='stylesheet' type='text/css' media='screen' href="./styles/sidebar.css">
 	<script src='./script/main.js'></script>
 </head>
 <body>
@@ -39,7 +40,7 @@
 		</nav>
 	</header>
 	<div class="center">
-		<aside>
+		<aside id="aside">
 			<!-- account information -->
 			<div class="account">
 				<!-- picture of the first letter of the name entered-->
@@ -56,68 +57,77 @@
 			<!-- diet options -->
 			<div class="sidebar">
 				<div class="filter-section">
-					<h3>Diet Options</h3>
-					<div class="filter-checkboxes">
-						<input type="checkbox" name="vegan" id="vegan" value="vegan">
-						<label for="vegan">Vegan</label>
-					</div>
-					<div class="filter-checkboxes">
-						<input type="checkbox" name="vegetarian" id="vegetarian" value="vegetarian">
-						<label for="vegetarian">Vegetarian</label>
-					</div>
-					<div class="filter-checkboxes">
-						<input type="checkbox" name="gluten-free" id="gluten-free" value="gluten-free">
-						<label for="gluten-free">Gluten-free</label>
-					</div>
-					<div class="filter-checkboxes">
-						<input type="checkbox" name="halal" id="halal" value="halal">
-						<label for="halal">Halal</label>
+					<h3 class="collapse-btn">Diet Options</h3>
+					<div class="filters">
+						<div class="filter-checkboxes">
+							<input type="checkbox" name="vegan" id="vegan" value="vegan">
+							<label for="vegan">Vegan</label>
+						</div>
+						<div class="filter-checkboxes">
+							<input type="checkbox" name="vegetarian" id="vegetarian" value="vegetarian">
+							<label for="vegetarian">Vegetarian</label>
+						</div>
+						<div class="filter-checkboxes">
+							<input type="checkbox" name="gluten-free" id="gluten-free" value="gluten-free">
+							<label for="gluten-free">Gluten-free</label>
+						</div>
+						<div class="filter-checkboxes">
+							<input type="checkbox" name="halal" id="halal" value="halal">
+							<label for="halal">Halal</label>
+						</div>
 					</div>
 				</div>
 			
 				<!-- allergies -->
 				<div class="filter-section">
-					<h3>Allergies</h3>
-					<div class="filter-checkboxes">
-						<input type="checkbox" name="nuts" id="nuts" value="nuts">
-						<label for="nuts">nuts</label>
-					</div>
-					<div class="filter-checkboxes">
-						<input type="checkbox" name="dairy" id="dairy" value="dairy">
-						<label for="dairy">Dairy</label>
-					</div>
-					<div class="filter-checkboxes">
-						<input type="checkbox" name="fish" id="fish" value="fish">
-						<label for="fish">Fish</label>
-					</div>
-					<div class="filter-checkboxes">
-						<input type="checkbox" name="soy" id="soy" value="soy">
-						<label for="soy">Soy</label>
+					<h3 class="collapse-btn">Allergies</h3>
+					<div class="filters">
+						<div class="filter-checkboxes">
+							<input type="checkbox" name="nuts" id="nuts" value="nuts">
+							<label for="nuts">nuts</label>
+						</div>
+						<div class="filter-checkboxes">
+							<input type="checkbox" name="dairy" id="dairy" value="dairy">
+							<label for="dairy">Dairy</label>
+						</div>
+						<div class="filter-checkboxes">
+							<input type="checkbox" name="fish" id="fish" value="fish">
+							<label for="fish">Fish</label>
+						</div>
+						<div class="filter-checkboxes">
+							<input type="checkbox" name="soy" id="soy" value="soy">
+							<label for="soy">Soy</label>
+						</div>
 					</div>
 				</div>
 				<!-- items -->
 				<div class="filter-section">
-					<h3>Items</h3>
-					<div class="filter-checkboxes">
-						<input type="checkbox" name="drink" id="drink" value="drink">
-						<label for="drink">Drink</label>
-					</div>
-					<div class="filter-checkboxes">
-						<input type="checkbox" name="main-dish" id="main-dish" value="main-dish">
-						<label for="main-dish">Main dish</label>
-					</div>
-					<div class="filter-checkboxes">
-						<input type="checkbox" name="side-dish" id="side-dish" value="side-dish">
-						<label for="side-dish">Side dish</label>
-					</div>
-					<div class="filter-checkboxes">
-						<input type="checkbox" name="dessert" id="dessert" value="dessert">
-						<label for="dessert">Dessert</label>
+					<h3 class="collapse-btn">Items</h3>
+					<div class="filters">
+						<div class="filter-checkboxes">
+							<input type="checkbox" name="drink" id="drink" value="drink">
+							<label for="drink">Drink</label>
+						</div>
+						<div class="filter-checkboxes">
+							<input type="checkbox" name="main-dish" id="main-dish" value="main-dish">
+							<label for="main-dish">Main dish</label>
+						</div>
+						<div class="filter-checkboxes">
+							<input type="checkbox" name="side-dish" id="side-dish" value="side-dish">
+							<label for="side-dish">Side dish</label>
+						</div>
+						<div class="filter-checkboxes">
+							<input type="checkbox" name="dessert" id="dessert" value="dessert">
+							<label for="dessert">Dessert</label>
+						</div>
 					</div>
 				</div>
 			</div>
+			
 			<a href="sign_in.html" class="sign-inbtn">Sign in</a>
 		</aside>
+		<!-- the sidebar button  -->
+		<div class="sidebar-btn"></div>
 	
 		<main>
 			<h1>From Generosity to Necessity: Sharing Meals, Changing Lives</h1>
@@ -137,7 +147,7 @@
 		</main>
 	</div>
 
-	<footer style="margin-left: 175px;">
+	<footer>
 		<div class="footer-section" id="footer">
 			<div class="footer-subsection top-subsection">
 				<h4>About Us</h4>
@@ -177,5 +187,6 @@
 			<p>&copy; 2024 NoWasteSite. All Rights Reserved.</p>
 		</div>
 	</footer>
+	<script src='./script/main.js'></script>
 </body>
 </html>

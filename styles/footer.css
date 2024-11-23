@@ -3,7 +3,7 @@ footer {
     position: relative;
     padding: 20px 0;
     text-align: center;
-    /* margin-left: 187px;  I will be using this one for the index but I dont want to show it for the about page*/
+    margin-left: 170px; /* I will be using this one for the index but I dont want to show it for the about page*/
 }
 
 .footer-section {
@@ -31,10 +31,15 @@ footer {
    justify-content: center;
    gap: 150px;
    flex-wrap: wrap;
+   margin-top: 7px;
 }
 
 .top-subsection {
     text-align: center;
+}
+
+.footer-subsection ul li {
+    margin-bottom: 5px;
 }
 
 .footer-subsection ul li a {

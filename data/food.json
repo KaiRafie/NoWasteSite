@@ -1,0 +1,127 @@
+[
+    {
+      "foodTitle": "Spaghetti Carbonara",
+      "foodImage": "./food_images/carbonara.jpg",
+      "foodDescription": "Classic Italian pasta with creamy sauce and pancetta.",
+      "foodLocation": "1234 Rue Sainte-Catherine Ouest, Montreal, QC",
+      "providerName": "La Bella Restaurant",
+      "dietOptions": {
+        "vegan": false,
+        "vegetarian": false,
+        "glutenFree": false,
+        "halal": false
+      },
+      "allergies": {
+        "nuts": false,
+        "dairy": true,
+        "fish": false,
+        "soy": false
+      },
+      "items": {
+        "drink": false,
+        "mainDish": true,
+        "sideDish": false,
+        "dessert": false
+      }
+    },
+    {
+      "foodTitle": "Vegan Buddha Bowl",
+      "foodImage": "./food_images/buddha-bowl.jpg",
+      "foodDescription": "A colorful mix of quinoa, veggies, and tofu.",
+      "foodLocation": "5678 Avenue du Parc, Montreal, QC",
+      "providerName": "Green Leaf Restaurant",
+      "dietOptions": {
+        "vegan": true,
+        "vegetarian": true,
+        "glutenFree": true,
+        "allergies": true
+      },
+      "allergies": {
+        "nuts": false,
+        "dairy": false,
+        "fish": false,
+        "soy": true
+      },
+      "items": {
+        "drink": false,
+        "mainDish": true,
+        "sideDish": false,
+        "dessert": false
+      }
+    },
+    {
+      "foodTitle": "Chicken Biryani",
+      "foodImage": "./food_images/biryani.jpg",
+      "foodDescription": "Aromatic rice and chicken dish with spices.",
+      "foodLocation": "2345 Boulevard Saint-Laurent, Montreal, QC",
+      "providerName": "Spice Hub Restaurant",
+      "dietOptions": {
+        "vegan": false,
+        "vegetarian": false,
+        "glutenFree": true,
+        "halal": true
+      },
+      "allergies": {
+        "nuts": true,
+        "dairy": false,
+        "fish": false,
+        "soy": false
+      },
+      "items": {
+        "drink": false,
+        "mainDish": true,
+        "sideDish": false,
+        "dessert": false
+      }
+    },
+    {
+      "foodTitle": "Avocado Toast",
+      "foodImage": "./food_images/avocado-toast.jpg",
+      "foodDescription": "Smashed avocado on whole-grain bread.",
+      "foodLocation": "7890 Rue Sherbrooke Est, Montreal, QC",
+      "providerName": "Le Petit Déjeuner Restaurant",
+      "dietOptions": {
+        "vegan": true,
+        "vegetarian": true,
+        "glutenFree": false,
+        "halal": true
+      },
+      "allergies": {
+        "nuts": false,
+        "dairy": false,
+        "fish": false,
+        "soy": false
+      },
+      "items": {
+        "drink": false,
+        "mainDish": true,
+        "sideDish": false,
+        "dessert": false
+      }
+    },
+    {
+      "foodTitle": "Cheesecake",
+      "foodImage": "./food_images/cheesecake.jpg",
+      "foodDescription": "Rich and creamy dessert with a graham cracker crust.",
+      "foodLocation": "4567 Rue Saint-Denis, Montreal, QC",
+      "providerName": "Sweet Treats Restaurant",
+      "dietOptions": {
+        "vegan": false,
+        "vegetarian": true,
+        "glutenFree": false,
+        "halal": false
+      },
+      "allergies": {
+        "nuts": false,
+        "dairy": true,
+        "fish": false,
+        "soy": false
+      },
+      "items": {
+        "drink": false,
+        "mainDish": false,
+        "sideDish": false,
+        "dessert": true
+      }
+    }
+  ]

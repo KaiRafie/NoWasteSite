@@ -25,6 +25,8 @@ function loadFood(data) {
     const isSideDish = document.querySelector('#side-dish').checked;
     const isDessert = document.querySelector('#dessert').checked;
 
+    //unload data
+    unloadFood();
     //loading data
     
     for (let i = 0; i < data.length; i++) {

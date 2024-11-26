@@ -88,14 +88,4 @@ function unloadFood() {
     const itemsContainer = document.querySelector('.item-container');
     itemsContainer.innerHTML = '';
 }
-
-fetch('./data/food.json')
-    .then(response => response.json())
-    .then(data => {
-        window.foodData = data;
-        loadFood(window.foodData);
-    })
-    .catch(error => {
-        console.error('Error loading the data:', error);
-    });
     

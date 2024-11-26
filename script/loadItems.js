@@ -1,3 +1,4 @@
+
 // to load the data depending on the choice
 
 function loadFood(data) {
@@ -86,6 +87,17 @@ function unloadFood() {
     
     //get the containers
     const itemsContainer = document.querySelector('.item-container');
-    itemsContainer.innerHTML = '';
+    itemsContainer.innerHTML = `
+            <div class="item-container">
+				<template class="item-template">
+					<article class="food-item">
+						<div class="food-title"></div>
+						<img src="" alt="Plate-Image" class="food-image">
+						<p class="food-description"></p>
+						<p class="food-location"></p>
+						<p class="provider-name"></p>
+					</article>
+				</template>
+			</div>`;
 }
     

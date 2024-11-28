@@ -2,25 +2,19 @@
 // to load the data depending on the choice
 
 function loadFood(data) {
-    //get the containers
-    const itemsContainer = document.querySelector('.item-container');
+    //get the template
     const itemsTemplate = document.querySelector('.item-template');
+
     //The checkboxes
-    
+
     // diets
     const isVegan = document.querySelector('#vegan').checked;
     const isVegetarian = document.querySelector('#vegetarian').checked;
     const isGlutenFree = document.querySelector('#gluten-free').checked;
     const isHalal = document.querySelector('#halal').checked;
 
-    //allergies
-    const containsNuts = document.querySelector('#nuts').checked;
-    const containsDairy = document.querySelector('#dairy').checked;
-    const containsFish = document.querySelector('#fish').checked;
-    const containsSoy = document.querySelector('#soy').checked;
-
     //items
-    const isDring = document.querySelector('#drink').checked;
+    const isDrink = document.querySelector('#drink').checked;
     const isMainDish = document.querySelector('#main-dish').checked;
     const isSideDish = document.querySelector('#side-dish').checked;
     const isDessert = document.querySelector('#dessert').checked;
@@ -28,7 +22,7 @@ function loadFood(data) {
     //unload data
     unloadFood();
     //loading data
-    
+
     for (let i = 0; i < data.length; i++) {
         const food = data[i];
         const clone = itemsTemplate.content.cloneNode(true);
@@ -38,57 +32,65 @@ function loadFood(data) {
         clone.querySelector('.food-location').textContent = food.foodLocation;
         clone.querySelector('.provider-name').textContent = "provider: " + food.providerName
         //load the data if the criteria is met
-        
+
         //diets
         if (isVegan && food.dietOptions.vegan) {
-            itemsContainer.appendChild(clone);
+            // do not load the food if the food has an allergy AND the client has it as well
+            loadWithNoAllergies();
         }
         if (isVegetarian && food.dietOptions.vegetarian) {
-            itemsContainer.appendChild(clone);
+            loadWithNoAllergies();
         }
         if (isGlutenFree && food.dietOptions.glutenFree) {
-            itemsContainer.appendChild(clone);
+            loadWithNoAllergies();
         }
         if (isHalal && food.dietOptions.halal) {
-            itemsContainer.appendChild(clone);
-        }
-
-        //allergies
-        if (containsNuts && food.allergies.nuts) {
-            itemsContainer.appendChild(clone);
-        }
-        if (containsDairy && food.allergies.dairy) {
-            itemsContainer.appendChild(clone);
-        }
-        if (containsFish && food.allergies.fish) {
-            itemsContainer.appendChild(clone);
-        }
-        if (containsSoy && food.allergies.soy) {
-            itemsContainer.appendChild(clone);
+            loadWithNoAllergies();
         }
 
         //items
-        if (isDring && food.items.drink) {
-            itemsContainer.appendChild(clone);
+        if (isDrink && food.items.drink) {
+            loadWithNoAllergies();
         }
         if (isMainDish && food.items.mainDish) {
-            itemsContainer.appendChild(clone);
+            loadWithNoAllergies();
         }
         if (isSideDish && food.items.sideDish) {
-            itemsContainer.appendChild(clone);
+            loadWithNoAllergies();
         }
         if (isDessert && food.items.dessert) {
-            itemsContainer.appendChild(clone);
+            loadWithNoAllergies();
+        }
+
+
+        //load the item if no allergy selected is found in the item
+        function loadWithNoAllergies() {
+            //get the container
+            const itemsContainer = document.querySelector('.item-container');
+        
+            //allergies checkboxes
+            const containsNuts = document.querySelector('#nuts').checked;
+            const containsDairy = document.querySelector('#dairy').checked;
+            const containsFish = document.querySelector('#fish').checked;
+            const containsSoy = document.querySelector('#soy').checked;
+        
+            if (!(food.allergies.nuts && containsNuts) &&
+                !(food.allergies.dairy && containsDairy) &&
+                !(food.allergies.fish && containsFish) &&
+                !(food.allergies.soy && containsSoy)) {
+                itemsContainer.appendChild(clone);
+            }
         }
     }
-    
+
 };
 window.addEventListener('DOMContentLoaded', loadFood);
 
 function unloadFood() {
-  //get the containers
-  const itemsContainer = document.querySelector('.item-container');
-  itemsContainer.innerHTML = `
+    //get the containers
+    const itemsContainer = document.querySelector('.item-container');
+    itemsContainer.innerHTML = 
+        `
           <div class="item-container">
               <template class="item-template">
                   <article class="food-item">
@@ -99,5 +101,6 @@ function unloadFood() {
                       <p class="provider-name"></p>
                   </article>
               </template>
-          </div>`;
+          </div>
+        `;
 }

@@ -34,7 +34,7 @@ aside.collapsed {
     color: #3ddab0;
 }
 
-.account {
+.account-conatiner {
     display: inline-flex;
     align-items: center;
     justify-content: center;

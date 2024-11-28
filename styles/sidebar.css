@@ -1,5 +1,6 @@
 /* Sidebar Styling */
 aside {
+    margin-top: 52px;
     position: fixed;
     left: 0;
     width: 163.36px;
@@ -16,7 +17,7 @@ aside.collapsed {
     padding: 0;
     visibility: hidden;
     opacity: 0;
-    /* overflow: visible; */
+    transition: all 0.2s ease-in-out;
 }
 
 .sign-inbtn {
@@ -99,15 +100,15 @@ input[type="checkbox"] {
 
 /* Scrollable Sidebar */
 .sidebar {
+    overflow-x: hidden;
     overflow-y: auto;
     max-height: 100%;
-    
 }
 
 .filters {
     display: none;
     padding-left: 10px;
-    
+    transition: all 0.3s ease-in;
 }
 
 /* the options side arrows */
@@ -117,7 +118,7 @@ input[type="checkbox"] {
     margin:0px 3px;
     transform: rotate(0deg);
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.15s ease-in-out;
 }
 
 .collapse-btn.active::after {
@@ -127,7 +128,7 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-/* the sidebar arrow */
+/* the sidebar button */
 
 .sidebar-btn {
     position: fixed;
@@ -154,6 +155,7 @@ input[type="checkbox"] {
 }
 
 .sidebar-btn.active::after {
-    content: '>';
+    content: '<';
+    transform: rotate(180deg);
     display: block;
 }

@@ -36,7 +36,7 @@ function loadFood(data) {
         clone.querySelector('.food-image').src = food.foodImage;
         clone.querySelector('.food-description').textContent = food.foodDescription;
         clone.querySelector('.food-location').textContent = food.foodLocation;
-        clone.querySelector('.provider-name').textContent = food.providerName
+        clone.querySelector('.provider-name').textContent = "provider: " + food.providerName
         //load the data if the criteria is met
         
         //diets
@@ -86,20 +86,18 @@ function loadFood(data) {
 window.addEventListener('DOMContentLoaded', loadFood);
 
 function unloadFood() {
-    
-    //get the containers
-    const itemsContainer = document.querySelector('.item-container');
-    itemsContainer.innerHTML = `
-            <div class="item-container">
-				<template class="item-template">
-					<article class="food-item">
-						<div class="food-title"></div>
-						<img src="" alt="Plate-Image" class="food-image">
-						<p class="food-description"></p>
-						<p class="food-location"></p>
-						<p class="provider-name"></p>
-					</article>
-				</template>
-			</div>`;
+  //get the containers
+  const itemsContainer = document.querySelector('.item-container');
+  itemsContainer.innerHTML = `
+          <div class="item-container">
+              <template class="item-template">
+                  <article class="food-item">
+                      <div class="food-title"></div>
+                      <img src="" alt="Plate-Image" class="food-image">
+                      <p class="food-description"></p>
+                      <p class="food-location"></p>
+                      <p class="provider-name"></p>
+                  </article>
+              </template>
+          </div>`;
 }
-    

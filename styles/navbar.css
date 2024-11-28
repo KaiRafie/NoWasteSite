@@ -3,7 +3,6 @@
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 /* Header */
@@ -17,6 +16,8 @@
 
 /* Navbar */
 nav {
+    width: 100%;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,8 +52,10 @@ nav {
 .search-bar {
     display: flex;
     align-items: center;
-    width: 250px;
+    width: 260px;
+    border: 0px solid rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .search-bar input {
@@ -60,7 +63,7 @@ nav {
     padding: 8px 10px;
     border: none;
     outline: none;
-    font-size: 14px;
+    font-size: 13.5px;
 }
 
 .search-bar button {
@@ -87,4 +90,8 @@ nav {
     width: 120px;
     cursor: pointer;
     margin-left: -10px;
+}
+.logo img {
+    width: 120px;
+    height: 37px;
 }

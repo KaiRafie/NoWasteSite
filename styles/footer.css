@@ -1,9 +1,12 @@
+
+
 /* Footer */
 footer {
     position: relative;
     padding: 20px 0;
     text-align: center;
     margin-left: 170px; /* I will be using this one for the index but I dont want to show it for the about page*/
+    background-color: #f8f8f8;
 }
 
 .footer-section {

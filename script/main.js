@@ -1,5 +1,33 @@
+//load all data for the first time
+document.addEventListener('DOMContentLoaded', () => {
+    //fetch all data
+    fetch('./data/food.json')
+        .then(response => response.json())
+        .then(data => {
+            firstLoad(data);
+        })
+        .catch(error => {
+            console.error('Error loading the data:', error);
+        });
 
-// to collape the options in the sidebar
+    //have the buttons active
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    checkboxes.forEach((checkbox) => {
+        if (checkbox.name !== 'nuts' && checkbox.name !== 'dairy' && checkbox.name !== 'fish' && checkbox.name !== 'soy')
+            checkbox.checked = true;
+    })
+
+    //have the options open
+    
+    document.querySelectorAll('.collapse-btn').forEach((header) => {
+        const content = header.nextElementSibling;
+        header.classList.toggle('active');
+        content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+    });
+});
+
+// to collape the options in the sidebar when clicking on the arrow
 document.querySelectorAll('.collapse-btn').forEach((header) => {
     header.addEventListener('click', () => {
         const content = header.nextElementSibling;
@@ -7,7 +35,8 @@ document.querySelectorAll('.collapse-btn').forEach((header) => {
         header.classList.toggle('active');
     });
 });
-// to collapse the sidebar as a whole
+
+// to collapse the sidebar as a whole when clicking on the sidebar button
 document.querySelector('.sidebar-btn').addEventListener('click', function () {
     //sidebar
     const aside = document.querySelector('aside');
@@ -31,20 +60,7 @@ document.querySelector('.sidebar-btn').addEventListener('click', function () {
     this.classList.toggle('active');
 });
 
-//load all data for the first time
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('./data/food.json')
-        .then(response => response.json())
-        .then(data => {
-            firstLoad(data);
-        })
-        .catch(error => {
-            console.error('Error loading the data:', error);
-        });
-});
-
-
-//if the state of any of the checkboxes change, load the data accordingly
+//if the state of any of the checkboxes change, reload the data accordingly
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
 checkboxes.forEach((checkbox) => {
@@ -57,6 +73,5 @@ checkboxes.forEach((checkbox) => {
             .catch(error => {
                 console.error('Error loading the data:', error);
             });
-
     });
 });

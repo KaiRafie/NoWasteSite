@@ -1,10 +1,10 @@
+//get the container & the template
+const itemsTemplate = document.querySelector('.item-template');
+const itemsContainer = document.querySelector('.item-container');
 
 // to load the data depending on the choice
 
 function loadFood(data) {
-    //get the template
-    const itemsTemplate = document.querySelector('.item-template');
-
     //The checkboxes
 
     // diets
@@ -30,7 +30,7 @@ function loadFood(data) {
         clone.querySelector('.food-image').src = food.foodImage;
         clone.querySelector('.food-description').textContent = food.foodDescription;
         clone.querySelector('.food-location').textContent = food.foodLocation;
-        clone.querySelector('.provider-name').textContent = "provider: " + food.providerName
+        clone.querySelector('.provider-name').textContent = "provider: " + food.providerName;
         //load the data if the criteria is met
 
         //diets
@@ -65,9 +65,6 @@ function loadFood(data) {
 
         //load the item if no allergy selected is found in the item
         function loadWithNoAllergies() {
-            //get the container
-            const itemsContainer = document.querySelector('.item-container');
-        
             //allergies checkboxes
             const containsNuts = document.querySelector('#nuts').checked;
             const containsDairy = document.querySelector('#dairy').checked;
@@ -103,4 +100,26 @@ function unloadFood() {
               </template>
           </div>
         `;
+}
+
+//this function loads all the items once when the client visits the website
+function firstLoad(item) {
+    fetch('./data/food.json')
+    .then(response => response.json())
+    .then( () => {
+        for (let i = 0; i < item.length; i++) {
+            const food = item[i];
+            const clone = itemsTemplate.content.cloneNode(true);
+            clone.querySelector('.food-title').textContent = food.foodTitle;
+            clone.querySelector('.food-image').src = food.foodImage;
+            clone.querySelector('.food-description').textContent = food.foodDescription;
+            clone.querySelector('.food-location').textContent = food.foodLocation;
+            clone.querySelector('.provider-name').textContent = "provider: " + food.providerName;
+
+            itemsContainer.appendChild(clone);
+        }
+    })
+    .catch(error => {
+        console.error('Error loading the data:', error);
+    });
 }

@@ -23,19 +23,32 @@ document.querySelector('.sidebar-btn').addEventListener('click', function () {
     this.classList.toggle('active');
 });
 
+//load all data for the first time
 document.addEventListener('DOMContentLoaded', () => {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-    checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener('click', () => {
-            fetch('./data/food.json')
-                .then(response => response.json())
-                .then(data => {
-                    loadFood(data)
-                })
-                .catch(error => {
-                    console.error('Error loading the data:', error);
-                });
+    fetch('./data/food.json')
+        .then(response => response.json())
+        .then(data => {
+            firstLoad(data);
+        })
+        .catch(error => {
+            console.error('Error loading the data:', error);
         });
+});
+
+
+//if the state of any of the checkboxes change, load the data accordingly
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('click', () => {
+        fetch('./data/food.json')
+            .then(response => response.json())
+            .then(data => {
+                loadFood(data)
+            })
+            .catch(error => {
+                console.error('Error loading the data:', error);
+            });
+
     });
 });

@@ -1,5 +1,43 @@
+const accountContainer = document.querySelector('.account-container');
+const accountTemplate = document.querySelector('.account-template');
+const clone = accountTemplate.content.cloneNode(true);
+
+const letter = clone.querySelector('.first-letter');
+const name = clone.querySelector('.user-name');
+
+const userIndex = Cookies.get("userId");
+
 //load all data for the first time
 document.addEventListener('DOMContentLoaded', () => {
+    //load the user template and container
+    
+    
+    //check if the user continued as a guest or signed in
+
+    const isGuest = localStorage.getItem('isGuest') === 'true';
+
+    console.log("isGuest: " + isGuest);
+    if (isGuest) {
+        letter.textContent = '-';
+        name.textContent = 'Guest';
+    } else {
+        fetch("./data/users.json")
+            .then(response => response.json())
+            .then(data => {
+                const userName = data[userIndex].userName.substring(0, 6);
+                const firstLetter = userName[0].toUpperCase();
+                console.log("userIndex:", userIndex, "userName:", userName, "firstLetter:", firstLetter);
+                letter.textContent = firstLetter;
+                name.textContent = userName;
+            })
+            .catch(error => {
+                console.error("Error fetching or processing user data:", error);
+            });
+        document.querySelector('.sign-inbtn').textContent = 'Sign out';
+    }
+    accountContainer.appendChild(clone);
+
+
     //fetch all data
     fetch('./data/food.json')
         .then(response => response.json())
@@ -19,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     //have the options open
-    
     document.querySelectorAll('.collapse-btn').forEach((header) => {
         const content = header.nextElementSibling;
         header.classList.toggle('active');

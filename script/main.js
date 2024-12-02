@@ -1,3 +1,4 @@
+//have all the necessary elements for the account
 const accountContainer = document.querySelector('.account-container');
 const accountTemplate = document.querySelector('.account-template');
 const clone = accountTemplate.content.cloneNode(true);
@@ -10,8 +11,8 @@ const userIndex = Cookies.get("userId");
 //load all data for the first time
 document.addEventListener('DOMContentLoaded', () => {
     //load the user template and container
-    
-    
+
+
     //check if the user continued as a guest or signed in
 
     const isGuest = localStorage.getItem('isGuest') === 'true';
@@ -111,4 +112,30 @@ checkboxes.forEach((checkbox) => {
                 console.error('Error loading the data:', error);
             });
     });
+});
+
+//search bar functionality
+const searchBarButtons = document.querySelector('#search-bar-btn');
+
+//add the event listener to the search bar when inputting to search for a word in the 'food title' or 'food provider name'
+
+searchBarButtons.addEventListener('click', (e) => {
+    const searchBartext = document.querySelector('#search-bar').value.trim().toLowerCase();
+
+    fetch('./data/food.json')
+            .then(response => response.json())
+            .then(data => {
+                const filteredItems = data.filter(item =>
+                    item.foodTitle.toLowerCase().includes(searchBartext) ||
+                    item.providerName.toLowerCase().includes(searchBartext)
+                );
+            
+                unloadFood();
+                loadFood(filteredItems);
+            })
+            .catch(error => {
+                console.error('Error loading the data:', error);
+            });
+
+    
 });

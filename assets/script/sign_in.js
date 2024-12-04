@@ -20,7 +20,7 @@ document.querySelector('.signin-btn').addEventListener('click', () => {
                 if (user.password === password) {
                     Cookies.set("userId", i);
                     localStorage.setItem('isGuest', false);
-                    window.location.href = '../index.html';
+                    window.location.href = 'main.html';
                 } else {
                     alert("Incorrect password, please try again")
                 }

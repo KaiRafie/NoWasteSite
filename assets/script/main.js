@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         letter.textContent = '-';
         name.textContent = 'Guest';
     } else {
-        fetch("./data/users.json")
+        fetch("../assets/data/users.json")
             .then(response => response.json())
             .then(data => {
                 const userName = data[userIndex].userName.substring(0, 6);
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //fetch all data
-    fetch('./data/food.json')
+    fetch('../assets/data/food.json')
         .then(response => response.json())
         .then(data => {
             firstLoad(data);
@@ -103,7 +103,7 @@ const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
 checkboxes.forEach((checkbox) => {
     checkbox.addEventListener('click', () => {
-        fetch('./data/food.json')
+        fetch('../assets/data/food.json')
             .then(response => response.json())
             .then(data => {
                 loadFood(data)
@@ -122,7 +122,7 @@ const searchBarButtons = document.querySelector('#search-bar-btn');
 searchBarButtons.addEventListener('click', (e) => {
     const searchBartext = document.querySelector('#search-bar').value.trim().toLowerCase();
 
-    fetch('./data/food.json')
+    fetch('../assets/data/food.json')
             .then(response => response.json())
             .then(data => {
                 const filteredItems = data.filter(item =>

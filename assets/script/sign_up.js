@@ -1,6 +1,6 @@
 
 function getLastUserId() {
-    fetch('./data/users.json')
+    fetch('../assets/data/users.json')
     .then(response => response.json())
     .then(data => {
         const i = 0;

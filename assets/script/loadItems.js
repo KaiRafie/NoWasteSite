@@ -104,7 +104,7 @@ function unloadFood() {
 
 //this function loads all the items once when the client visits the website
 function firstLoad(item) {
-    fetch('./data/food.json')
+    fetch('../assets/data/food.json')
     .then(response => response.json())
     .then( () => {
         for (let i = 0; i < item.length; i++) {

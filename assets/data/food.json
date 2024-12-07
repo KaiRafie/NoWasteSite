@@ -2,7 +2,7 @@
   {
     "foodId": 1,
     "foodTitle": "Spaghetti Carbonara",
-    "foodImage": "...",
+    "foodImage": "/assets/images/food_images/spaghetti-carbonara.jpg",
     "foodDescription": "Classic Italian pasta with creamy sauce and pancetta.",
     "foodLocation": "1234 Rue Sainte-Catherine Ouest, Montreal, QC",
     "providerName": "La Bella Restaurant",
@@ -26,35 +26,9 @@
     }
   },
   {
-    "foodId": 2,
-    "foodTitle": "Vegan Buddha Bowl",
-    "foodImage": "...",
-    "foodDescription": "A colorful mix of quinoa, veggies, and tofu.",
-    "foodLocation": "5678 Avenue du Parc, Montreal, QC",
-    "providerName": "Green Leaf Restaurant",
-    "dietOptions": {
-      "vegan": true,
-      "vegetarian": true,
-      "glutenFree": true,
-      "halal": true
-    },
-    "allergies": {
-      "nuts": false,
-      "dairy": false,
-      "fish": false,
-      "soy": true
-    },
-    "items": {
-      "drink": false,
-      "mainDish": true,
-      "sideDish": false,
-      "dessert": false
-    }
-  },
-  {
     "foodId": 3,
     "foodTitle": "Chicken Biryani",
-    "foodImage": "...",
+    "foodImage": "/assets/images/food_images/biryani.jpg",
     "foodDescription": "Aromatic rice and chicken dish with spices.",
     "foodLocation": "2345 Boulevard Saint-Laurent, Montreal, QC",
     "providerName": "Spice Hub Restaurant",
@@ -80,8 +54,8 @@
   {
     "foodId": 4,
     "foodTitle": "Avocado Toast",
-    "foodImage": "...",
-    "foodDescription": "Smashed avocado on whole-grain bread.",
+    "foodImage": "/assets/images/food_images/avocado-toast.jpg",
+    "foodDescription": "Smashed avocado on whole-grain bread with spinash.",
     "foodLocation": "7890 Rue Sherbrooke Est, Montreal, QC",
     "providerName": "Le Petit Déjeuner Restaurant",
     "dietOptions": {
@@ -106,7 +80,7 @@
   {
     "foodId": 5,
     "foodTitle": "Cheesecake",
-    "foodImage": "...",
+    "foodImage": "/assets/images/food_images/cheesecake.jpg",
     "foodDescription": "Rich and creamy dessert with a graham cracker crust.",
     "foodLocation": "4567 Rue Saint-Denis, Montreal, QC",
     "providerName": "Sweet Treats Restaurant",
@@ -132,7 +106,7 @@
   {
     "foodId": 6,
     "foodTitle": "Grilled Salmon with Asparagus",
-    "foodImage": "...",
+    "foodImage": "/assets/images/food_images/salmon.jpg",
     "foodDescription": "Tender grilled salmon served with roasted asparagus and a lemon-butter sauce.",
     "foodLocation": "4567 Rue St-Denis, Montreal, QC",
     "providerName": "Seafood Delight",
@@ -158,8 +132,8 @@
   {
     "foodId": 7,
     "foodTitle": "Cauliflower Tacos",
-    "foodImage": "...",
-    "foodDescription": "Tacos filled with roasted cauliflower, salsa, and avocado.",
+    "foodImage": "/assets/images/food_images/cauliflower-taco.jpg",
+    "foodDescription": "Tacos filled with roasted cauliflower, salsa, and tomato.",
     "foodLocation": "7890 Boulevard Saint-Laurent, Montreal, QC",
     "providerName": "Veggie Delight",
     "dietOptions": {
@@ -184,7 +158,7 @@
   {
     "foodId": 8,
     "foodTitle": "Grilled Cheese Sandwich",
-    "foodImage": "...",
+    "foodImage": "/assets/images/food_images/chesse-sandwich.jpg",
     "foodDescription": "Classic grilled cheese with a crispy golden crust.",
     "foodLocation": "1234 Rue Sainte-Catherine, Montreal, QC",
     "providerName": "Cheese Lovers Cafe",
@@ -210,7 +184,7 @@
   {
     "foodId": 9,
     "foodTitle": "Spicy Ramen",
-    "foodImage": "...",
+    "foodImage": "/assets/images/food_images/ramen.jpg",
     "foodDescription": "A steaming bowl of ramen with spicy broth and noodles.",
     "foodLocation": "3456 Rue Saint-Denis, Montreal, QC",
     "providerName": "Ramen House",
@@ -236,7 +210,7 @@
   {
     "foodId": 10,
     "foodTitle": "Margherita Pizza",
-    "foodImage": "...",
+    "foodImage": "/assets/images/food_images/pizza.jpg",
     "foodDescription": "Classic pizza topped with fresh mozzarella, basil, and tomatoes.",
     "foodLocation": "6789 Avenue des Pins, Montreal, QC",
     "providerName": "Pizza Pizzaz",
@@ -262,7 +236,7 @@
   {
     "foodId": 11,
     "foodTitle": "Falafel Wrap",
-    "foodImage": "...",
+    "foodImage": "/assets/images/food_images/falafel.jpg",
     "foodDescription": "A wrap filled with crispy falafel, hummus, and fresh veggies.",
     "foodLocation": "1234 Rue Papineau, Montreal, QC",
     "providerName": "Middle Eastern Eats",
@@ -288,7 +262,7 @@
   {
     "foodId": 12,
     "foodTitle": "Lentil Soup",
-    "foodImage": "...",
+    "foodImage": "/assets/images/food_images/lentil-soup.jpg",
     "foodDescription": "A hearty and warming soup made with lentils and spices.",
     "foodLocation": "2468 Rue Saint-Joseph, Montreal, QC",
     "providerName": "Soups & More",
@@ -314,7 +288,7 @@
   {
     "foodId": 13,
     "foodTitle": "Beef Burger",
-    "foodImage": "...",
+    "foodImage": "/assets/images/food_images/beef-burger.jpg",
     "foodDescription": "A juicy beef patty with lettuce, tomato, and cheese.",
     "foodLocation": "4567 Rue de la Montagne, Montreal, QC",
     "providerName": "Burger Joint",
@@ -340,7 +314,7 @@
   {
     "foodId": 14,
     "foodTitle": "Vegetable Stir Fry",
-    "foodImage": "...",
+    "foodImage": "/assets/images/food_images/vegetables.jpg",
     "foodDescription": "A medley of stir-fried vegetables with soy sauce and spices.",
     "foodLocation": "5678 Boulevard RenLvesque, Montreal, QC",
     "providerName": "Asian Fusion",
@@ -366,7 +340,7 @@
   {
     "foodId": 15,
     "foodTitle": "Chicken Shawarma",
-    "foodImage": "...",
+    "foodImage": "/assets/images/food_images/chicken-wrap.jpg",
     "foodDescription": "A flavorful chicken shawarma wrapped in pita with garlic sauce.",
     "foodLocation": "7890 Boulevard St-Laurent, Montreal, QC",
     "providerName": "Shawarma King",

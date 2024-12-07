@@ -11,7 +11,7 @@ document.querySelector('.signin-btn').addEventListener('click', () => {
     const password = document.querySelector('#password').value;
 
     //fetch the data and verify the credintials
-    fetch('./data/users.json')
+    fetch('../assets/data/users.json')
     .then(response => response.json())
     .then(data => {
         for (let i = 0; i< data.length; i++) {
@@ -20,7 +20,7 @@ document.querySelector('.signin-btn').addEventListener('click', () => {
                 if (user.password === password) {
                     Cookies.set("userId", i);
                     localStorage.setItem('isGuest', false);
-                    window.location.href = 'index.html';
+                    window.location.href = 'main.html';
                 } else {
                     alert("Incorrect password, please try again")
                 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>No Waste Site</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- Icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/styles/sign_up.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/styles/footer.css'>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="signup-container">
+            <form action="/data/users.json" method="POST">
+                <div class="form-info">
+                    <label for="email">User name:</label>
+                    <input type="text" name="username" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-info">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-info">
+                    <label for="password">Enter Password:</label>
+                    <input type="password" name="ent-password" id="ent-password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-info">
+                    <label for="password">Renter Password:</label>
+                    <input type="password" name="reent-password" id="reent-password" placeholder="Reenter your password" required>
+                </div>
+                <div class="form-info">
+                    <button type="submit" class="signin-btn">Register</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer style="margin-left: 0;">
+        <div class="footer-bottom">
+			<p>&copy; 2024 NoWasteSite. All Rights Reserved.</p>
+		</div>
+    </footer>
+
+    <script src="../assets/script/sign_up.js"></script>
+</body>
+</html>

@@ -34,7 +34,7 @@ aside.collapsed {
     color: #3ddab0;
 }
 
-.account {
+.account-container {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -42,11 +42,11 @@ aside.collapsed {
 }
 
 .first-letter {
-    font-size: 25px;
+    font-size: 20px;
     color: #ffffff;
     background-color: #3ddab0;
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -55,9 +55,12 @@ aside.collapsed {
 }
 
 .user-name {
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 18px;
     color: #333333;
-    right: 10px;
+    right: 5px;
 }
 
 .sidebar {

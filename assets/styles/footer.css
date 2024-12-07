@@ -60,3 +60,7 @@ footer {
     color: #909090;
     font-size: 0.8rem;
 }
+
+#footer p {
+    margin: -2px 0 7px 0;
+}

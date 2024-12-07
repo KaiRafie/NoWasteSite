@@ -15,7 +15,7 @@ body {
     background-color: #f4f4f4;
 }
 
-form {
+.form {
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
@@ -75,9 +75,9 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 
 /* Sign up and guest links */
-form p {
+.form p {
     font-size: 14px;
-    color: #333;
+    color: #c8c0c0;
     text-align: center;
 }
 
